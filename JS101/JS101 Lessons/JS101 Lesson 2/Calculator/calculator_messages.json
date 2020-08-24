@@ -1,0 +1,10 @@
+{
+  "en": {
+    "welcome": "Welcome to the Upgraded Super Calculator 3000! Enter your name:",
+    "validName": "Make sure to enter a valid name."
+  },
+  "es": {
+    "welcome": "Bienvenido a la mejor calculadora del mundo! Entre su nombre:",
+    "validName": "Asegúrese de entrar un nombre válido."
+  }
+}
