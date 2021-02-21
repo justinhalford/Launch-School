@@ -1,11 +1,13 @@
-// Enable user input.
+console.clear()
+
+Enable user input.
 const readline = require('readline-sync');
 
 //Greet user.
-console.log('Hello, there!');
+console.log("\n Hello, there! \n");
 
 // Ask the user for the loan amount (US dollars).
-console.log("=> What is the loan amount (US dollars)?");
+console.log("=> What is the loan amount (US dollars)? \n");
 let loanAmount = Number(readline.question());
 
 // Check that loan amount is not zero or a negative valued number.
@@ -15,7 +17,7 @@ while ((loanAmount < 0) || Number.isNaN(loanAmount)) {
 }
 
 // Ask the user for the annual percentage rate (apr). Assume positive rate.
-console.log("=> What is the annual percentage rate (%)?");
+console.log("\n => What is the annual percentage rate (%)? \n");
 let annualPercentageRate = Number(readline.question());
 
 // Check that loan amount is not a negative valued number.
@@ -25,7 +27,7 @@ while ((annualPercentageRate < 0) || (Number.isNaN(annualPercentageRate))) {
 }
 
 // Ask the user for the loan duration (months).
-console.log("=> What is the duration of the loan (in integer valued years)?");
+console.log("\n => What is the duration of the loan (in integer valued years)? \n");
 let loanDurationYears = Number(readline.question());
 
 // Check that loan amount is not zero or a negative valued number.
@@ -48,7 +50,7 @@ function calculateMonthlyPayment() {
     let monthlyPayment = loanAmount / loanDurationMonths;
     return monthlyPayment;
   } else {
-    console.log("Hmm...your interest rate is faulty...");
+    console.log("Hmm...your interest rate is neither zero nor a positive valued number.");
     return 'Oops! Interest rate is not a number >= 0.';
   }
 }
@@ -56,4 +58,4 @@ function calculateMonthlyPayment() {
 let monthlyPayment = calculateMonthlyPayment();
 
 //Display to the user their monthly and total payments.
-console.log(`Your monthly payment comes out to $${monthlyPayment.toFixed(2)} and your total payment is $${(monthlyPayment * loanDurationMonths).toFixed(2)}. Have a nice day!`);
+console.log(`\n Your monthly payment comes out to $${monthlyPayment.toFixed(2)} and your total payment is $${(monthlyPayment * loanDurationMonths).toFixed(2)}. Have a nice day! \n`);
